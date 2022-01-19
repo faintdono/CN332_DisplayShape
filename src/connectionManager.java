@@ -1,8 +1,4 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class connectionManager {
@@ -31,8 +27,8 @@ public class connectionManager {
         rst = st.executeQuery(sql);
         ArrayList<String[]> result = new ArrayList<String[]>();
         while (rst.next()) {
-            String[] q = { rst.getString("object"), rst.getString("location"), rst.getString("shape"),
-                    rst.getString("param1"), rst.getString("param2"), rst.getString("param3"), rst.getString("color") };
+            String[] q = {rst.getString("object"), rst.getString("location"), rst.getString("shape"),
+                    rst.getString("param1"), rst.getString("param2"), rst.getString("param3"), rst.getString("color")};
             result.add(q);
         }
         return result;

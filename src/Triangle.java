@@ -1,11 +1,11 @@
 public class Triangle extends Shape {
 
-    private double p1_x;
-    private double p1_y;
-    private double p2_x;
-    private double p2_y;
-    private double p3_x;
-    private double p3_y;
+    private final double p1_x;
+    private final double p1_y;
+    private final double p2_x;
+    private final double p2_y;
+    private final double p3_x;
+    private final double p3_y;
 
     public Triangle() {
         p1_x = 100;
@@ -21,7 +21,7 @@ public class Triangle extends Shape {
 
         String target = "(";
         String replacement = "";
-        String processed = (param1+","+param2+","+param3).replace(target, replacement);
+        String processed = (param1 + "," + param2 + "," + param3).replace(target, replacement);
         target = ")";
         processed = processed.replace(target, replacement);
         String[] point = processed.split(",");
@@ -33,7 +33,7 @@ public class Triangle extends Shape {
         p3_y = Double.parseDouble(point[5]);
     }
 
-    public double getp1_x(){
+    public double getp1_x() {
         return p1_x;
     }
 

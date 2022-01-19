@@ -1,10 +1,11 @@
-import java.awt.*;
-import java.awt.geom.*;
-import java.util.ArrayList;
+import org.beryx.awt.color.ColorFactory;
 
 import javax.swing.*;
-
-import org.beryx.awt.color.ColorFactory;
+import java.awt.*;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Path2D;
+import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
 
 public class drawingCanvas extends JComponent {
 
@@ -56,8 +57,8 @@ public class drawingCanvas extends JComponent {
                 Rectangle2D.Double r = new Rectangle2D.Double(
                         rectangle.getX() * 1,
                         rectangle.getY() * 1,
-                        rectangle.getWidth()* 5,
-                        rectangle.getHeight() * 5 );
+                        rectangle.getWidth() * 5,
+                        rectangle.getHeight() * 5);
 
                 // parameter in dataframe are too low need to multiply it to show that code can
                 // work perfectly
