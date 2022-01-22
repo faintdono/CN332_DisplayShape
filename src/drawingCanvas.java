@@ -30,8 +30,6 @@ public class drawingCanvas extends JComponent {
                         square.getWidth(),
                         square.getWidth());
 
-                // parameter in dataframe are too low need to multiply it to show that code can
-                // work perfectly
 
                 Color c = ColorFactory.valueOf(square.getColor());
                 g2d.setColor(c);
@@ -45,8 +43,6 @@ public class drawingCanvas extends JComponent {
                         circle.getRadius(),
                         circle.getRadius());
 
-                // parameter in dataframe are too low need to multiply it to show that code can
-                // work perfectly
 
                 Color c = ColorFactory.valueOf(circle.getColor());
                 g2d.setColor(c);
@@ -60,8 +56,6 @@ public class drawingCanvas extends JComponent {
                         rectangle.getWidth(),
                         rectangle.getHeight());
 
-                // parameter in dataframe are too low need to multiply it to show that code can
-                // work perfectly
 
                 Color c = ColorFactory.valueOf(rectangle.getColor());
                 g2d.setColor(c);
@@ -75,8 +69,6 @@ public class drawingCanvas extends JComponent {
                 p.lineTo((t.getp3_x() + t.getX()), (t.getp3_y() + t.getY()));
                 p.closePath();
 
-                // parameter in dataframe are too low need to multiply it to show that code can
-                // work perfectly
 
                 Color c = ColorFactory.valueOf(t.getColor());
                 g2d.setColor(c);
