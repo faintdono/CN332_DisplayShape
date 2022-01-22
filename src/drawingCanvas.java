@@ -25,10 +25,10 @@ public class drawingCanvas extends JComponent {
             if (shapeObj.get(i).toString().equals("Square")) {
                 Square square = (Square) shapeObj.get(i);
                 Rectangle2D.Double s = new Rectangle2D.Double(
-                        square.getX() * 50,
-                        square.getY() * 50,
-                        square.getWidth() * 5,
-                        square.getWidth() * 5);
+                        square.getX(),
+                        square.getY(),
+                        square.getWidth(),
+                        square.getWidth());
 
                 // parameter in dataframe are too low need to multiply it to show that code can
                 // work perfectly
@@ -40,10 +40,10 @@ public class drawingCanvas extends JComponent {
             } else if (shapeObj.get(i).toString().equals("Circle")) {
                 Circle circle = (Circle) shapeObj.get(i);
                 Ellipse2D.Double e = new Ellipse2D.Double(
-                        circle.getX() * 50,
-                        circle.getY() * 50,
-                        circle.getRadius() * 5,
-                        circle.getRadius() * 5);
+                        circle.getX(),
+                        circle.getY(),
+                        circle.getRadius(),
+                        circle.getRadius());
 
                 // parameter in dataframe are too low need to multiply it to show that code can
                 // work perfectly
@@ -55,10 +55,10 @@ public class drawingCanvas extends JComponent {
             } else if (shapeObj.get(i).toString().equals("Rectangle")) {
                 Rectangle rectangle = (Rectangle) shapeObj.get(i);
                 Rectangle2D.Double r = new Rectangle2D.Double(
-                        rectangle.getX() * 1,
-                        rectangle.getY() * 1,
-                        rectangle.getWidth() * 5,
-                        rectangle.getHeight() * 5);
+                        rectangle.getX(),
+                        rectangle.getY(),
+                        rectangle.getWidth(),
+                        rectangle.getHeight());
 
                 // parameter in dataframe are too low need to multiply it to show that code can
                 // work perfectly
@@ -70,15 +70,15 @@ public class drawingCanvas extends JComponent {
             } else if (shapeObj.get(i).toString().equals("Triangle")) {
                 Triangle t = (Triangle) shapeObj.get(i);
                 Path2D.Double p = new Path2D.Double();
-                p.moveTo((t.getp1_x() + t.getX()) * 6, (t.getp1_y() + t.getY()) * 6);
-                p.lineTo((t.getp2_x() + t.getX()) * 6, (t.getp2_y() + t.getY()) * 6);
-                p.lineTo((t.getp3_x() + t.getX()) * 6, (t.getp3_y() + t.getY()) * 6);
+                p.moveTo((t.getp1_x() + t.getX()), (t.getp1_y() + t.getY()));
+                p.lineTo((t.getp2_x() + t.getX()), (t.getp2_y() + t.getY()));
+                p.lineTo((t.getp3_x() + t.getX()), (t.getp3_y() + t.getY()));
                 p.closePath();
 
                 // parameter in dataframe are too low need to multiply it to show that code can
                 // work perfectly
 
-                Color c = ColorFactory.valueOf("BLACK");
+                Color c = ColorFactory.valueOf(t.getColor());
                 g2d.setColor(c);
                 g2d.fill(p);
             }
